@@ -1,26 +1,65 @@
-# Credit Risk Classification Report
+# Credit Risk Classification
 
-## Overview of the Analysis
+## 📌 Project Overview
+This project focuses on **credit risk classification**, utilizing **machine learning models** to assess financial risk based on historical loan data. The analysis aims to predict the likelihood of loan default, helping financial institutions make informed lending decisions.
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+## 🛠️ Technologies Used
+- **Python** 🐍
+- **Pandas & NumPy** 📊
+- **Scikit-Learn** 🤖
+- **Matplotlib & Seaborn** 🎨
+- **Jupyter Notebook** 📓
 
-* The purpose of this analysis is to train the given lenders data based on the features using a logistic regression to predict whether a loan would be healthy or risky. 
-* The data used was a given data set with the following features: loan size, interest rate, borrower income, debt to income, number of accounts, derogatory marks, and total debt. These features were trained and tested to help predict the loan status (0 or 1). 0 is a healthy loan and 1 is an unhealthy loan.
-* I then trained and tested the data and used a logistic regression to make predictions using the testing data and fitting the model using the training data.
-  
-## Results
+## 📂 Repository Structure
+```
+📦 credit_risk_classification
+ ┣ 📂 data                 # Dataset(s) used for training and testing
+ ┣ 📂 notebooks            # Jupyter Notebooks with analysis and modeling
+ ┣ 📜 README.md            # Project documentation
+ ┣ 📜 requirements.txt     # Dependencies
+ ┗ 📜 model.pkl           # Trained machine learning model (if applicable)
+```
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
+## 🚀 Getting Started
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/BrendanD2/credit_risk_classification.git
+cd credit_risk_classification
+```
+### 2️⃣ Install Dependencies
+Ensure you have Python installed, then run:
+```bash
+pip install -r requirements.txt
+```
+### 3️⃣ Run the Analysis
+Open Jupyter Notebook and execute the analysis:
+```bash
+jupyter notebook
+```
 
-* Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
-    * The model had an accuracy of 99%. When predicting a loan status of 0 (healthy) the precision was 100% with a recall of 99%. When predicting a loan status of 1 (unhealthy) the precision was 84% with a recall of 94%. When predicting true positives and negatives the model was fairly accurate based on the recall values. 
+## 📊 Key Features & Insights
+✔ **Data Cleaning & Preprocessing** – Handling missing values, encoding categorical variables, and feature engineering.  
+✔ **Exploratory Data Analysis (EDA)** – Visualizing credit risk trends and feature distributions.  
+✔ **Machine Learning Modeling** – Training and evaluating classification models (Logistic Regression, Random Forest, XGBoost).  
+✔ **Model Evaluation** – Assessing accuracy, precision, recall, and AUC-ROC for performance comparison.  
 
-## Summary
+## 📌 Example Code Snippet
+```python
+from sklearn.ensemble import RandomForestClassifier
+# Initialize model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+# Train model
+model.fit(X_train, y_train)
+# Make predictions
+y_pred = model.predict(X_test)
+```
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+## 📜 License
+This project is licensed under the **MIT License** – feel free to use, modify, and distribute.
 
-* Which one seems to perform best? How do you know it performs best?
-* The model was able to perform best with true/false positives. The model based on the confusion matrix recorded the most true positives with a small amount of false positives. This means that the model was highly accurate when predicting healthy loans which will be very useful to users. The smallest amount predicted was false positives which is good, but for this problem we would want that number to be as close to 0 as possible. There was a higher amount of false negatives which can also be just as hurtful as the false positives because people can be missing out on healthy loans because of the prediction. 
-* In this problem it is important to predict both '1' and '0' because incorrectly predicting a healthy loan when it is unhealthy can hurt the user. 
+## 🤝 Contributing
+Contributions are welcome! If you'd like to improve or extend this project, please fork the repository and submit a pull request.
+
+## 📬 Contact
+For any questions or collaborations, feel free to connect with me on **[LinkedIn](https://www.linkedin.com/in/brendan-doucette-0b33ab268/)**.
 
